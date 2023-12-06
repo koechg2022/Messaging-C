@@ -11,7 +11,7 @@
 
 
 
-class frame : public wxFrame {
+class main_frame : public wxFrame {
 
     private:
         unsigned short contacts_count;
@@ -24,7 +24,6 @@ class frame : public wxFrame {
             this->menu_bar = new wxMenuBar();
 
             // first create the "File dropdown"
-
             this->file_item = new wxMenu();
             
             // For Adding new contacts
@@ -47,7 +46,7 @@ class frame : public wxFrame {
 
     public:
 
-        frame(const wxString& title) : wxFrame(NULL, wxID_ANY, title) {
+        main_frame(const wxString& title) : wxFrame(NULL, wxID_ANY, title) {
             this->create_top_menu();
 
             // the look itself of the screen.
@@ -71,7 +70,7 @@ class msg_c_app :public wxApp {
 
     public:
         bool OnInit() {
-            frame* messaging_frame = new frame("Messaging C");
+            main_frame* messaging_frame = new main_frame("Messaging C");
             messaging_frame->SetClientSize(WIDTH, HEIGHT);
             messaging_frame->Center();
             messaging_frame->Show();
