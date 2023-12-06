@@ -6,8 +6,6 @@
 
 #define WIDTH 1000
 #define HEIGHT 700
-#define CONTACT_WIDTH (WIDTH / 5)
-#define MSG_WIDTH (WIDTH - CONTACT_WIDTH)
 
 
 
@@ -36,13 +34,14 @@ class main_frame : public wxFrame {
             file_item->Append(wxID_ANY, "&Update Contact...\tCtrl-U", "Update a contact's information");
             menu_bar->Append(file_item, "&File");
 
-
             SetMenuBar(menu_bar);
         }
 
         void add_contact() {
             // Add contacts to the database.
         }
+
+
 
     public:
 
