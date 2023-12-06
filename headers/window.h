@@ -41,8 +41,6 @@ class main_frame : public wxFrame {
             // Add contacts to the database.
         }
 
-
-
     public:
 
         main_frame(const wxString& title) : wxFrame(NULL, wxID_ANY, title) {
